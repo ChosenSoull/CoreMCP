@@ -1,0 +1,13 @@
+# Python cache files
+__pycache__/
+*.pyc
+
+# Playwright files
+.ms-playwright
+
+# Virtual environment directory
+venv/
+
+# Environment files
+.env
+.vscode/
