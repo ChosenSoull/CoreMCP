@@ -1,4 +1,3 @@
-"""Web search functionality using DuckDuckGo."""
 from ddgs import DDGS
 
 def search_web(query: str, max_results: int = 5) -> list[dict]:
@@ -25,6 +24,6 @@ def search_web(query: str, max_results: int = 5) -> list[dict]:
                     "snippet": r.get("body")
                 })
     except Exception as e:
-        print(f"Ошибка при поиске: {e}")
+        print(f"Search error: {e}")
         
     return results

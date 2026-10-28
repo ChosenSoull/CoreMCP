@@ -1,5 +1,3 @@
-"""Simple arithmetic calculation functionality."""
-
 def calculate(expression: str) -> str:
     """Evaluate a simple arithmetic expression.
 

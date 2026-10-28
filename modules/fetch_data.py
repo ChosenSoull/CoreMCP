@@ -1,4 +1,3 @@
-"""Data fetching functionality using Playwright."""
 import json
 import re
 from html.parser import HTMLParser
