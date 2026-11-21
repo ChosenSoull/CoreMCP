@@ -36,4 +36,3 @@ if os.getenv("USE_AGENT_TOOLS", "False") == "True":
     mcp.tool()(agent_tools.write_file)
     mcp.tool()(agent_tools.search_files)
     mcp.tool()(agent_tools.run_program)
-    

@@ -10,16 +10,6 @@ from docx import Document
 from pypdf import PdfReader
 from pptx import Presentation
 
-parser = argparse.ArgumentParser(description="A script for adding various files to a database for an LLM")
-parser.add_argument(
-    "--type",
-    required=True,
-    choices=["file", "url"],
-    type=str.lower,
-    help="Type of data source: 'file' or 'url'",
-)
-parser.add_argument("--url", required=False, help="Site URL (required when --type url is specified)")
-
 def parse_pptx(file_path: str) -> str:
     prs = Presentation(file_path)
     slides_md = []
@@ -164,6 +154,16 @@ def save_site(url: str) -> None:
         print(f"Ошибка при обработке URL {url}: {e}")
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="A script for adding various files to a database for an LLM")
+    parser.add_argument(
+        "--type",
+        required=True,
+        choices=["file", "url"],
+        type=str.lower,
+        help="Type of data source: 'file' or 'url'",
+    )
+    parser.add_argument("--url", required=False, help="Site URL (required when --type url is specified)")
+
     args = parser.parse_args()
 
     if args.type == "url":
