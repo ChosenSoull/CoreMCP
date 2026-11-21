@@ -4,7 +4,6 @@ FROM python:3.14-slim
 
 # Set the working directory in the container
 WORKDIR /app
-ENV PLAYWRIGHT_BROWSERS_PATH /app/.ms-playwright
 
 # Copy the requirements file into the container at /app
 COPY requirements.txt .
@@ -12,7 +11,6 @@ COPY requirements.txt .
 # Install any needed packages specified in requirements.txt
 # We assume requirements.txt contains dependencies like 'ddgs' and 'playwright'
 RUN pip install --no-cache-dir -r requirements.txt
-RUN playwright install --with-deps chromium
 
 # Copy the rest of the application source code into the container at /app
 COPY . .

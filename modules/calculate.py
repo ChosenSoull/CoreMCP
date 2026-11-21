@@ -1,6 +1,5 @@
 def calculate(expression: str) -> str:
     """Evaluate a simple arithmetic expression.
-
     The function performs a very small safety check: only digits, operators
     and parentheses are allowed.  For production use a proper parser should
     replace ``eval``.

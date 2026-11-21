@@ -1,5 +1,5 @@
 # Python cache files
-__pycache__/
+__pycache__
 *.pyc
 
 # Playwright files
@@ -11,3 +11,6 @@ venv/
 # Environment files
 .env
 .vscode/
+
+# database for embeddings
+dquant-database

@@ -1,18 +1,16 @@
 from ddgs import DDGS
 
 def search_web(query: str, max_results: int = 5) -> list[dict]:
-    """
-    Search the web using DuckDuckGo and return a list of results. 
-    
+    """Search the web using DuckDuckGo and return a list of results. 
     Parameters
-        ----------
-        query: str
-            Target query.
-        max_results: int, optional
-            max results in number
+    ----------
+    query: str
+        Target query.
+    max_results: int, optional
+        max results in number
     Returns
-        -------
-        array results with result or [] if error
+    -------
+    array results with result or [] if error
     """
     results = []
     try:

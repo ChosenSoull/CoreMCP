@@ -1,9 +1,6 @@
 # Python cache files
-__pycache__/
+__pycache__
 *.pyc
-
-# Playwright files
-.ms-playwright/
 
 # Virtual environment directory
 venv/
@@ -12,3 +9,9 @@ venv/
 .env
 .vscode/
 .github/
+
+# database for embeddings
+dquant-database
+
+# bin
+add_to_database.py
