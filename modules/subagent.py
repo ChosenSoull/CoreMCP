@@ -76,7 +76,7 @@ def run_subagent(
 
     mcp_api_key = os.getenv("OPENAI_API_KEY")
     mcp_base_url = os.getenv("OPENAI_BASE_URL", "http://localhost:8080/v1/")
-    mcp_model = os.getenv("OPENAI_MODEL", "gpt-3.5-turbo")
+    mcp_model = os.getenv("OPENAI_MODEL")
 
     env_temp = os.getenv("OPENAI_TEMPERATURE")
     mcp_temperature = float(env_temp) if env_temp is not None else 0.7

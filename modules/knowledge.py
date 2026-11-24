@@ -74,7 +74,6 @@ def _split_markdown(
                 if sub_chunk and sub_chunk != header:
                     chunks.append(sub_chunk.strip())
             else:
-                # Если код всё же больше max_size, режем по строкам без разрыва строк пополам
                 lines = block.splitlines()
                 sub_chunk = ""
                 for line in lines:

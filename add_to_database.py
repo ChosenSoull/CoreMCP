@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 load_dotenv()
-from modules import knowledge, fetch_data as f
+from modules import knowledge, fetch_data as fetch
 import os
 import tkinter as tk
 from tkinter import filedialog
@@ -144,7 +144,7 @@ def select_and_upload():
 def save_site(url: str) -> None:
     print(f"Загрузка страницы: {url}...")
     try:
-        content = f.fetch_data(args.url, RAG=True)
+        content = fetch.fetch_data(args.url, RAG=True)
         if content:
             knowledge.save_documents(content)
             print(f"Успешно добавлено в базу: {url}")
@@ -167,6 +167,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.type == "url":
+        if not args.url:
+            parser.error("--url обязателен при --type url")
         save_site(args.url)
     else:
         select_and_upload()
