@@ -28,6 +28,9 @@ For Server
 
 ```
 git clone https://github.com/ChosenSoull/CoreMCP.git
+python -m venv venv
+source venv/bin/activate
+python install -r requirements.txt
 cd CoreMCP
 python main.py
 ```
